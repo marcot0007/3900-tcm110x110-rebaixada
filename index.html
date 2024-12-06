@@ -1,27 +1,32 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>&lt;model-viewer&gt; template</title>
-    <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
-  </head>
-  <body>
-    <!-- <model-viewer> HTML element -->
-    <model-viewer src="3900-tcm110x110-rebaixada.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" environment-image="photo_studio_01_4k.hdr" exposure="2">
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
-      </div>
-    </model-viewer>  
-    <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizador 3D</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff; /* Fundo branco */
+      margin: 0;
+    }
+    model-viewer {
+      width: 100%;
+      height: 80vh;
+      background-color: #ffffff; /* Fundo branco do visualizador */
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: black;">Visualizador 3D</h1>
+  <model-viewer
+    src="3900-tcm110x110-rebaixado
+.glb"
+    camera-controls
+    auto-rotate
+    background-color="#ffffff">
+  </model-viewer>
+</body>
 </html>
